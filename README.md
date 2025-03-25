@@ -1,1 +1,3 @@
-# denisbedlow.github.io
+# Denis Bedlow
+editor based in Paris
+
