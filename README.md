@@ -1,12 +1,13 @@
 # Denis Bedlow
 editor based in Paris
 
-# Editor
+
+## Editor
 
 
 
 
-# VFX editor
+## VFX editor
 
 
 
