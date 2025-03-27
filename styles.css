@@ -1,5 +1,5 @@
 body {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     line-height: 1.6;
     margin: 40px;
     background-color: #121212;
@@ -18,7 +18,7 @@ header a {
 
 h1 {
     font-size: 3em;
-    margin: 10px 10;
+    margin: 10px;
 }
 
 h2 {
@@ -54,4 +54,87 @@ footer {
     font-size: 0.9em;
     border-top: 1px solid #e0e0e0;
     padding-top: 10px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    body {
+        margin: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    h3 {
+        font-size: 1em;
+    }
+    
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+    
+    header {
+        text-align: center;
+    }
+    
+    main {
+        margin-bottom: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+    }
+    
+    h3 {
+        font-size: 0.9em;
+    }
+    
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 5px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1em;
+    }
+    
+    h3 {
+        font-size: 0.8em;
+    }
+    
+    footer {
+        font-size: 0.7em;
+    }
+}
+
+/* Flexbox for layout adjustments */
+header, main, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
