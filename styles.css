@@ -21,9 +21,14 @@ h1 {
     margin: 10px 10;
 }
 
+h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
 h3 {
     font-size: 1.2em;
-    margin: 0
 }
 
 main {
@@ -32,12 +37,6 @@ main {
 
 section {
     margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.5em;
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 5px;
 }
 
 ul {
