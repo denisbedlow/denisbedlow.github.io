@@ -1,9 +1,9 @@
 body {
-    font-family: Noto;
+    font-family: Inter;
     line-height: 1.6;
     margin: 40px;
-    background-color: #2D3132;
-    color: #000;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 header {
@@ -13,7 +13,7 @@ header {
 
 header a {
     text-decoration: none;
-    color: #000;
+    color: #e0e0e0;
 }
 
 h1 {
@@ -23,7 +23,7 @@ h1 {
 
 h3 {
     font-size: 1.2em;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 main {
@@ -36,7 +36,7 @@ section {
 
 h2 {
     font-size: 1.5em;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #e0e0e0;
     padding-bottom: 5px;
 }
 
@@ -52,6 +52,6 @@ li {
 footer {
     text-align: left;
     font-size: 0.9em;
-    border-top: 1px solid #000;
+    border-top: 1px solid #e0e0e0;
     padding-top: 10px;
 }
