@@ -66,6 +66,7 @@ footer {
 .movie-item img {
     width: 50%;
     height: auto;
+    border-radius: 5px;
 }
 
 .movie-info {
