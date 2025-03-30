@@ -126,7 +126,9 @@ footer {
         font-size: 0.8em;
     }
     .movie-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 15px; /* Add spacing between items */
     }
 }
 
@@ -152,7 +154,9 @@ footer {
     }
 
     .movie-grid {
-        grid-template-columns: 1fr; /* 1 column */
+        display: grid;
+        grid-template-columns: 1fr); /* 1 columns */
+        gap: 10px; /* Add spacing between items */
     }
 }
 
