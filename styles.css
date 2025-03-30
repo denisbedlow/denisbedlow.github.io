@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Inter, sans-serif;
     line-height: 1.6;
@@ -7,8 +8,54 @@ body {
 }
 
 header {
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: #121212;
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px; /* Constrain width */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-left {
     text-align: left;
-    margin-bottom: 20px;
+}
+
+.header-right {
+    display: flex;
+}
+
+.header-right ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right ul li {
+    display: inline;
+}
+
+.header-right ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+.header-right ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 h1 {
@@ -28,14 +75,16 @@ h3 {
 }
 
 main {
+    margin-top: 100px; /* Prevent content from being hidden behind the header */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 40px;
 }
 
 section {
     margin-bottom: 20px;
 }
-
-
 
 footer {
     text-align: left;
@@ -44,12 +93,11 @@ footer {
     padding-top: 10px;
 }
 
-
-
+/* Movie Grid */
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 20px; /* Add spacing between items */
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+    gap: 20px;
 }
 
 .movie-item {
@@ -57,7 +105,7 @@ footer {
 }
 
 .movie-item img {
-    width: 100%; /* Ensure images fill their grid cell */
+    width: 100%;
     height: auto;
     border-radius: 5px;
 }
@@ -72,96 +120,170 @@ footer {
     border-radius: 5px;
 }
 
+/* Default styles for the navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
 
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.5em;
+    cursor: pointer;
+}
 
-/* Media Queries for responsiveness */
+/* Media Queries for Responsiveness */
+
+/* Large screens (max-width: 1200px) */
 @media (max-width: 1200px) {
     body {
         margin: 20px;
     }
-    
+
+    .header-container {
+        padding: 10px;
+    }
+
     h1 {
         font-size: 2.5em;
     }
-    
+
     h2 {
         font-size: 1.3em;
     }
-    
+
     h3 {
         font-size: 1em;
     }
-    
+
     footer {
         font-size: 0.8em;
     }
+
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
 }
 
+/* Medium screens (max-width: 768px) */
 @media (max-width: 768px) {
     body {
         margin: 10px;
     }
-    
+
     header {
         text-align: center;
     }
-    
+
+    .header-container {
+        flex-direction: row; /* Keep the header content in two columns */
+        justify-content: space-between; /* Add space between the two columns */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header-left {
+        text-align: left; /* Ensure the text stays aligned to the left */
+        flex: 1; /* Allow the left column to take up available space */
+    }
+
+    .header-right {
+        flex: 1; /* Allow the right column to take up available space */
+        display: flex;
+        justify-content: flex-end; /* Align the navigation links to the right */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button */
+    }
+
+    .nav-links {
+        display: none; /* Hide the navigation links by default */
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        background-color: #121212;
+        position: absolute;
+        top: 100%; /* Position below the header */
+        right: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    .header-right.active .nav-links {
+        display: flex; /* Show the navigation links when active */
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
     main {
         margin-bottom: 20px;
     }
-    
+
     h1 {
         font-size: 2em;
     }
-    
+
     h2 {
         font-size: 1.2em;
     }
-    
+
     h3 {
         font-size: 0.9em;
     }
-    
+
     footer {
         font-size: 0.8em;
     }
+
     .movie-grid {
-        display: grid;
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
-        gap: 15px; /* Add spacing between items */
+        gap: 15px;
     }
 }
 
+/* Small screens (max-width: 480px) */
 @media (max-width: 480px) {
     body {
         margin: 5px;
     }
-    
+
+    .header-container {
+        padding: 5px;
+    }
+
     h1 {
         font-size: 1.5em;
     }
-    
+
     h2 {
         font-size: 1em;
     }
-    
+
     h3 {
         font-size: 0.8em;
     }
-    
+
     footer {
         font-size: 0.7em;
     }
 
     .movie-grid {
-        display: grid;
-        grid-template-columns: 1fr; /* 1 columns */
-        gap: 10px; /* Add spacing between items */
+        grid-template-columns: 1fr; /* 1 column */
+        gap: 10px;
     }
 }
 
 /* Flexbox for layout adjustments */
-header, main, footer {
+main, footer {
     display: flex;
     flex-direction: column;
     align-items: left;

@@ -7,11 +7,25 @@
 </head>
 <body>
     <header>
-        <h1>Denis Bedlow</h1>
-        <h3>Editor based in Paris</h3>
+        <div class="header-container">
+            <div class="header-left">
+                <h1>Denis Bedlow</h1>
+                <h3>Editor based in Paris</h3>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+            <nav class="header-right">
+                <ul class="nav-links">
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#art-films">Art Films</a></li>
+                    <li><a href="#music-videos">Music Videos</a></li>
+                    <li><a href="#vfx-editor">VFX Editor</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section>
+        <section id="movies">
             <h2>Movies</h2>
             <div class="movie-grid">
                 <div class="movie-item">
@@ -72,7 +86,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="art-films">
             <h2>Art Films</h2>
             <div class="movie-grid">
                 <div class="movie-item">
@@ -98,7 +112,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="music-videos">
             <h2>Music Videos</h2>
             <div class="movie-grid">
                 <div class="movie-item">
@@ -119,7 +133,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="vfx-editor">
             <h2>VFX editor</h2>
             <div class="movie-grid">
                 <div class="movie-item">
@@ -146,7 +160,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="contact">
         <p>Contact</p>
     </footer>
 </body>
