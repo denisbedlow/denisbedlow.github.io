@@ -1,10 +1,19 @@
+:root {
+    --primary-color: #121212;
+    --secondary-color: #e0e0e0;
+    --font-family: 'Inter', sans-serif;
+    --header-height: 120px;
+    --gap-large: 20px;
+    --gap-small: 10px;
+}
+
 /* General Styles */
 body {
-    font-family: Inter, sans-serif;
+    font-family: var(--font-family);
     line-height: 1.6;
     margin: 40px;
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 header {
@@ -12,8 +21,8 @@ header {
     top: 0;
     left: 0;
     width: 100%; /* Full width */
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
@@ -59,6 +68,7 @@ header {
     text-decoration: underline;
 }
 
+/* Base styles for headings */
 h1 {
     font-size: 3em;
     margin: 0px;
@@ -97,8 +107,8 @@ footer {
 /* Movie Grid */
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
     gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
 }
 
 .movie-item {
@@ -125,9 +135,20 @@ footer {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: var(--gap-large);
     margin: 0;
     padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .menu-toggle {
@@ -197,7 +218,7 @@ footer {
     .header-right {
         flex: 1; /* Allow the right column to take up available space */
         display: flex;
-        justify-content: flex-end; /* Align the navigation links to the right */
+        justify-content: flex-end; /* Align the toggle button to the right */
     }
 
     .menu-toggle {
@@ -205,9 +226,9 @@ footer {
     }
 
     .nav-links {
-        display: none; /* Hide the navigation links by default */
+        display: none; /* Hide the navigation links completely */
         flex-direction: column;
-        gap: 10px;
+        gap: var(--gap-small);
         padding: 10px;
         background-color: #121212;
         position: absolute;
@@ -289,4 +310,45 @@ main, footer {
     flex-direction: column;
     align-items: left;
     justify-content: left;
+}
+
+/* Base styles */
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: var(--gap-small);
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    .header-right.active .nav-links {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
 }
