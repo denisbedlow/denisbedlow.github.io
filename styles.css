@@ -125,6 +125,9 @@ footer {
     footer {
         font-size: 0.8em;
     }
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
 }
 
 @media (max-width: 480px) {
@@ -146,6 +149,10 @@ footer {
     
     footer {
         font-size: 0.7em;
+    }
+
+    .movie-grid {
+        grid-template-columns: 1fr; /* 1 column */
     }
 }
 
