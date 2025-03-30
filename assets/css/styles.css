@@ -45,28 +45,7 @@ header {
     text-align: right;
 }
 
-.header-right ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-}
 
-.header-right ul li {
-    display: inline;
-}
-
-.header-right ul li a {
-    text-decoration: none;
-    color: #e0e0e0;
-    font-weight: bold;
-}
-
-.header-right ul li a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
 
 /* Base styles for headings */
 h1 {
@@ -231,8 +210,8 @@ footer {
         display: none; /* Hide the navigation links completely */
         flex-direction: column;
         gap: var(--gap-small);
-        padding: 10px;
-        background-color: #852828;
+        padding: var(--gap-small);
+        background-color: #000000;
         position: absolute;
         top: 100%; /* Position below the header */
         right: 0;
