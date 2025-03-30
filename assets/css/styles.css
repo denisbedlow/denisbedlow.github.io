@@ -99,6 +99,9 @@ section {
 
 footer {
     text-align: left;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 0.9em;
     border-top: 1px solid #e0e0e0;
     padding-top: 10px;
@@ -147,7 +150,7 @@ footer {
 }
 
 .nav-links li a:hover {
-    color: #ffffff;
+    color: #e0e0e0;
     text-decoration: underline;
 }
 
@@ -216,7 +219,6 @@ footer {
     }
 
     .header-right {
-        flex: 1; /* Allow the right column to take up available space */
         display: flex;
         justify-content: flex-end; /* Align the toggle button to the right */
     }
@@ -230,7 +232,7 @@ footer {
         flex-direction: column;
         gap: var(--gap-small);
         padding: 10px;
-        background-color: #121212;
+        background-color: #852828;
         position: absolute;
         top: 100%; /* Position below the header */
         right: 0;
@@ -239,7 +241,7 @@ footer {
     }
 
     .header-right.active .nav-links {
-        display: flex; /* Show the navigation links when active */
+        display: flex; /* Show the navigation links when the menu is toggled */
     }
 
     .nav-links li {
@@ -310,45 +312,4 @@ main, footer {
     flex-direction: column;
     align-items: left;
     justify-content: left;
-}
-
-/* Base styles */
-
-/* Media Queries */
-@media (max-width: 1200px) {
-    .movie-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        padding: 10px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: var(--gap-small);
-        background-color: var(--primary-color);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        z-index: 999;
-    }
-
-    .header-right.active .nav-links {
-        display: flex;
-    }
-}
-
-@media (max-width: 480px) {
-    .movie-grid {
-        grid-template-columns: 1fr;
-    }
 }
