@@ -155,7 +155,7 @@ footer {
 
     .movie-grid {
         display: grid;
-        grid-template-columns: 1fr); /* 1 columns */
+        grid-template-columns: 1fr; /* 1 columns */
         gap: 10px; /* Add spacing between items */
     }
 }
