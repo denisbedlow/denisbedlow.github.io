@@ -37,6 +37,7 @@ header {
 }
 
 .header-left {
+    display: flex;
     text-align: left;
 }
 
