@@ -100,7 +100,8 @@ footer {
 
 .movie-item img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 2.7 / 4; /* Set the desired aspect ratio, e.g., 16:9 */
+    object-fit: cover; /* Ensures the image fills the container while maintaining the ratio */
     border-radius: 5px;
 }
 
