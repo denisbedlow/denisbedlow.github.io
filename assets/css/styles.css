@@ -114,16 +114,6 @@ footer {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-/*.hero-text h1 {
-    font-size: 2em;
-    margin: 0;
-}
-
-.hero-text p {
-    font-size: 1em;
-    margin: 0;
-}
-
 /* Movie Grid */
 .movie-grid {
     display: grid;
@@ -271,6 +261,14 @@ footer {
 
     .nav-links li {
         text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        max-height: 400px; /* Adjust the height as needed */
+        object-fit: cover; /* Ensures the image fills the container while maintaining its aspect ratio */
+        border-radius: 5px; /* Optional: Add rounded corners */
     }
 
     main {
