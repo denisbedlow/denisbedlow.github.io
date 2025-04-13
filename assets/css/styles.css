@@ -33,7 +33,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 0px;
+    padding: 10px 10px;
 }
 
 .header-left {
@@ -70,7 +70,7 @@ h3 {
 }
 
 main {
-    margin-top: 120px; /* Prevent content from being hidden behind the header */
+    margin-top: 80px; /* Prevent content from being hidden behind the header */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -108,9 +108,8 @@ footer {
 
 .hero-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 1em;
+    right: 1em;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
@@ -219,7 +218,9 @@ footer {
 
     header {
         text-align: center;
+        top: 10px;
     }
+
 
     .header-container {
         flex-direction: row; /* Keep the header content in two columns */
@@ -263,13 +264,6 @@ footer {
         text-align: center;
     }
 
-    .hero-image {
-        width: 100%;
-        height: auto;
-        max-height: 400px; /* Adjust the height as needed */
-        object-fit: cover; /* Ensures the image fills the container while maintaining its aspect ratio */
-        border-radius: 5px; /* Optional: Add rounded corners */
-    }
 
     main {
         margin-bottom: 20px;
@@ -295,6 +289,11 @@ footer {
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
         gap: 15px;
     }
+    .hero-image {
+        min-height: 200px; /* Adjust the height as needed */
+        margin-bottom: 0px; /* Add spacing below the image */
+        margin-top: 0px; /* Add spacing below the image */
+    }
 }
 
 /* Small screens (max-width: 480px) */
@@ -302,6 +301,11 @@ footer {
     body {
         margin: 5px;
     }
+
+    main {
+        margin-top: 70px; /* Prevent content from being hidden behind the header */
+    }
+    
 
     .header-container {
         padding: 5px;
@@ -327,6 +331,8 @@ footer {
         grid-template-columns: 1fr; /* 1 column */
         gap: 10px;
     }
+
+
 }
 
 /* Flexbox for layout adjustments */
@@ -337,8 +343,8 @@ main, footer {
     justify-content: center;
 }
 
-.mail-button .icon {
-    width: 32px;
+.icon-button .icon {
+    width: auto;
     height: 32px;
     vertical-align: middle;
 }
