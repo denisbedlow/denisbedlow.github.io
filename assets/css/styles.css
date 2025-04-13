@@ -41,6 +41,10 @@ header {
     text-align: left;
 }
 
+.header-left a {
+    text-decoration: none; /* Removes the underline from the link */
+}
+
 .header-right {
     display: flex;
     text-align: right;
@@ -56,7 +60,7 @@ h1 {
 
 h2 {
     font-size: 1.5em;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--secondary-color);
     padding-bottom: 5px;
 }
 
@@ -78,13 +82,46 @@ section {
 }
 
 footer {
-    text-align: left;
+    text-align: center;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     font-size: 0.9em;
-    border-top: 1px solid #e0e0e0;
     padding-top: 10px;
+}
+
+.hero-container {
+    position: relative;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the image fills the container while maintaining its aspect ratio */
+    margin-bottom: var(--gap-small); /* Add spacing below the image */
+    margin-top: var(--gap-small); /* Add spacing below the image */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1em;
+    margin: 0;
 }
 
 /* Movie Grid */
@@ -103,6 +140,12 @@ footer {
     aspect-ratio: 2.7 / 4; /* Set the desired aspect ratio, e.g., 16:9 */
     object-fit: cover; /* Ensures the image fills the container while maintaining the ratio */
     border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.movie-item img:hover {
+    transform: scale(1.02); /* Slightly enlarge the image */
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
 }
 
 .movie-info {
