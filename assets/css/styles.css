@@ -300,6 +300,10 @@ footer {
         margin-bottom: 0px; /* Add spacing below the image */
         margin-top: 0px; /* Add spacing below the image */
     }
+
+    .hero-text {
+        top: 0; /* Aligns the text box with the top of the hero container */
+    }
 }
 
 /* Small screens (max-width: 480px) */
