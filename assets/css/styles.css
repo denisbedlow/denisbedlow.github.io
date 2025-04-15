@@ -312,6 +312,10 @@ footer {
         margin: 5px;
     }
 
+    header {
+        top: 5px;
+    }
+
     main {
         margin-top: 70px; /* Prevent content from being hidden behind the header */
     }
