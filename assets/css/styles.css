@@ -67,6 +67,7 @@ h2 {
 h3 {
     font-size: 1em;
     margin: 0px;
+    font-weight: 300; /* Makes the font thin */
 }
 
 main {
@@ -110,7 +111,6 @@ footer {
     position: absolute;
     top: 10px;
     left: 0;
-    font-family: sans-serif;
     color: var(--primary-color);
     margin: 0; /* Ensure no margin pushes it down */
     padding-left: 4px;
