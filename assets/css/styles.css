@@ -296,7 +296,6 @@ footer {
         gap: 15px;
     }
     .hero-image {
-        min-height: 150px; /* Adjust the height as needed */
         margin-bottom: 0px; /* Add spacing below the image */
         margin-top: 0px; /* Add spacing below the image */
     }
