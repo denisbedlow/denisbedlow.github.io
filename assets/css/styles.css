@@ -65,7 +65,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 0px;
 }
 
@@ -92,8 +92,7 @@ footer {
 
 .hero-container {
     position: relative;
-    text-align: center;
-    color: var(--secondary-color);
+    display: inline-block;
 }
 
 .hero-image {
@@ -103,14 +102,21 @@ footer {
     object-fit: cover; /* Ensures the image fills the container while maintaining its aspect ratio */
     margin-bottom: var(--gap-small); /* Add spacing below the image */
     margin-top: var(--gap-small); /* Add spacing below the image */
-    border-radius: 5px; /* Optional: Add rounded corners */
+    border: #e0e0e0 solid 1px;
+    border-radius: 0px; /* Optional: Add rounded corners */
 }
 
 .hero-text {
     position: absolute;
-    bottom: 1em;
-    right: 1em;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    top: 10px;
+    left: 0;
+    font-family: sans-serif;
+    color: var(--primary-color);
+    margin: 0; /* Ensure no margin pushes it down */
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: var(--secondary-color);
+
 }
 
 /* Movie Grid */
