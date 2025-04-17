@@ -18,12 +18,13 @@ body {
 
 header {
     position: fixed; /* Fix the header at the top */
-    top: 20px;
+    top: 0px;
     left: 0;
     width: 100%; /* Full width */
-    background-color: var(--primary-color);
+    background-color: rgba(18, 18, 18, 0.6); /* Semi-transparent background */;
     color: var(--secondary-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
 
@@ -224,7 +225,6 @@ footer {
 
     header {
         text-align: center;
-        top: 10px;
     }
 
 
@@ -309,10 +309,6 @@ footer {
 @media (max-width: 480px) {
     body {
         margin: 5px;
-    }
-
-    header {
-        top: 5px;
     }
 
     main {
