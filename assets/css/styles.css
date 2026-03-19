@@ -2,7 +2,6 @@
     --primary-color: #121212;
     --secondary-color: #e0e0e0;
     --font-family: 'Inter', sans-serif;
-    --header-height: 120px;
     --gap-large: 20px;
     --gap-small: 10px;
 }
@@ -18,7 +17,7 @@ body {
 
 header {
     position: fixed; /* Fix the header at the top */
-    top: 0px;
+    top: 0;
     left: 0;
     width: 100%; /* Full width */
     background-color: rgba(18, 18, 18, 0.6); /* Semi-transparent background */;
@@ -56,7 +55,7 @@ header {
 /* Base styles for headings */
 h1 {
     font-size: 3em;
-    margin: 0px;
+    margin: 0;
 }
 
 h2 {
@@ -67,7 +66,7 @@ h2 {
 
 h3 {
     font-size: 1em;
-    margin: 0px;
+    margin: 0;
     font-weight: 400; /* Makes the font thin */
 }
 
@@ -77,6 +76,10 @@ main {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 section {
@@ -105,7 +108,7 @@ footer {
     margin-bottom: var(--gap-small); /* Add spacing below the image */
     margin-top: var(--gap-small); /* Add spacing below the image */
     border: #e0e0e0 solid 1px;
-    border-radius: 0px; /* Optional: Add rounded corners */
+    border-radius: 0; /* Optional: Add rounded corners */
 }
 
 .hero-text {
@@ -117,7 +120,12 @@ footer {
     padding-left: 4px;
     padding-right: 4px;
     background-color: var(--secondary-color);
+}
 
+.hero-text h1 {
+    font-size: 1em;
+    margin: 0;
+    font-weight: 400;
 }
 
 /* Movie Grid */
@@ -175,6 +183,13 @@ footer {
     text-decoration: underline;
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
 .menu-toggle {
     display: none; /* Hide the toggle button by default */
     background: none;
@@ -205,6 +220,10 @@ footer {
     }
 
     h3 {
+        font-size: 1em;
+    }
+
+    .hero-text h1 {
         font-size: 1em;
     }
 
@@ -287,6 +306,10 @@ footer {
         font-size: 0.9em;
     }
 
+    .hero-text h1 {
+        font-size: 0.9em;
+    }
+
     footer {
         font-size: 0.8em;
     }
@@ -296,8 +319,8 @@ footer {
         gap: 15px;
     }
     .hero-image {
-        margin-bottom: 0px; /* Add spacing below the image */
-        margin-top: 0px; /* Add spacing below the image */
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
     .hero-text {
@@ -331,6 +354,10 @@ footer {
         font-size: 0.8em;
     }
 
+    .hero-text h1 {
+        font-size: 0.8em;
+    }
+
     footer {
         font-size: 0.7em;
     }
@@ -343,8 +370,7 @@ footer {
 
 }
 
-/* Flexbox for layout adjustments */
-main, footer {
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;

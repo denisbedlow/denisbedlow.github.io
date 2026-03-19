@@ -10,13 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Toggle the 'active' class on the header-right element
         menuToggle.addEventListener("click", () => {
-            headerRight.classList.toggle("active");
+            const isExpanded = headerRight.classList.toggle("active");
+            menuToggle.setAttribute("aria-expanded", isExpanded);
         });
 
         // Close the menu if clicking outside of it
         document.addEventListener("click", (event) => {
             if (!headerRight.contains(event.target) && !menuToggle.contains(event.target)) {
                 headerRight.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
             }
         });
 
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinks.forEach((link) => {
             link.addEventListener("click", () => {
                 headerRight.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
             });
         });
     } catch (error) {
