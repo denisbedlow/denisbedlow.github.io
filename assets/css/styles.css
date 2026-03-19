@@ -377,6 +377,24 @@ footer {
     justify-content: center;
 }
 
+.contact-button {
+    display: inline-block;
+    margin: 16px 0 24px;
+    padding: 10px 24px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #3391ff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s;
+}
+
+.contact-button:hover {
+    opacity: 0.6;
+}
+
 .icon-button .icon {
     width: auto;
     height: 32px;
